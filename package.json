@@ -4,7 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "npx hardhat compile",
+    "test": "npx hardhat test",
+    "clean": "rm -rf artifacts && rm -rf cache && rm -rf coverage && rm -rf coverage.json && rm -rf .solcover.js && rm -rf yarn.lock",
+    "cover": "npx hardhat coverage",
+    "deploy:local": "hardhat run --network moonbase scripts/deploy.js",
+    "verify": "npx hardhat verify --network moonbase CONTRACT_ADDRESS"
   },
   "repository": {
     "type": "git",
@@ -19,10 +24,17 @@
   "homepage": "https://github.com/KingdomParadise/ATO_Smartcontract#readme",
   "devDependencies": {
     "@nomiclabs/hardhat-ethers": "^2.0.6",
+    "@nomiclabs/hardhat-etherscan": "^3.1.0",
     "@nomiclabs/hardhat-waffle": "^2.0.3",
     "chai": "^4.3.6",
     "ethereum-waffle": "^3.4.4",
     "ethers": "^5.6.8",
     "hardhat": "^2.9.7"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "^4.6.0",
+    "dotenv": "^8.2.0",
+    "hardhat-gas-reporter": "^1.0.8",
+    "solidity-coverage": "^0.7.21"
   }
 }
