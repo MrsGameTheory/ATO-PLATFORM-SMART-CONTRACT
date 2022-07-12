@@ -19,7 +19,7 @@ module.exports = {
 		moonbase: {
 			url: `https://rpc.testnet.moonbeam.network`,
 			chainId: 1287,
-			accounts: [process.env.privateKey] // Insert your private key here
+			accounts: [process.env.PRIVATE_KEY] // Insert your private key here
 		},
     hardhat: {
       mining: {

@@ -25,9 +25,15 @@ contract ATO is Ownable {
         uint256 price;
         string owner;
     }
+    struct ArtworkPrivate {
+        string artist;
+        string title;
+        string description;
+    }
 
     // Mapping are cheaper than arrays
     mapping(string => Artwork) public artworks;
+    mapping(string => ArtworkPrivate) public privateartworks;
 
     modifier notContract() {
         require(!_isContract(msg.sender), "Contract not allowed");
@@ -72,6 +78,11 @@ contract ATO is Ownable {
             dimensionIncm: _dimensionIncm,
             price: _price,
             owner: _owner
+        });
+        privateartworks[_id] = ArtworkPrivate({
+            artist: _artist,
+            title: _title,
+            description: _description
         });
 
         emit ArtworkSubmit(_id, artworks[_id]);
