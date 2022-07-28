@@ -3,6 +3,7 @@ require("@nomiclabs/hardhat-ethers");
 require("hardhat-gas-reporter");
 require("solidity-coverage");
 require("@nomiclabs/hardhat-etherscan");
+require('@openzeppelin/hardhat-upgrades');
 
 require("dotenv").config();
 
@@ -21,6 +22,11 @@ module.exports = {
 			chainId: 1287,
 			accounts: [process.env.PRIVATE_KEY] // Insert your private key here
 		},
+    moonbeam: {
+      url: `https://rpc.api.moonbeam.network`,
+			chainId: 1284,
+      accounts: [process.env.PRIVATE_KEY]
+    },
     hardhat: {
       mining: {
         auto: false,

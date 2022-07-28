@@ -4,7 +4,7 @@ pragma solidity ^0.8.4;
 
 import "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol";
 
-contract ATO is OwnableUpgradeable {
+contract ATO_v2 is OwnableUpgradeable {
     struct _Dimension {
         uint256 width;
         uint256 height;
@@ -82,22 +82,14 @@ contract ATO is OwnableUpgradeable {
     }
 
     function updateArtwork(
-        string calldata _id,
-        Artwork calldata artwork,
-        ArtworkPrivate calldata privateArtiwork
+        string memory _id,
+        Artwork memory artwork,
+        ArtworkPrivate memory privateArtiwork
     ) external onlyOwner notContract {
         artworks[_id] = artwork;
         privateartworks[_id] = privateArtiwork;
 
         emit ArtworkSubmit(_id, artworks[_id]);
-    }
-
-    function getArtworkPub (string calldata id) public view returns(Artwork memory) {
-        return artworks[id];
-    }
-
-    function getArtworkPri (string calldata id) public view returns(ArtworkPrivate memory) {
-        return privateartworks[id];
     }
 
     /**

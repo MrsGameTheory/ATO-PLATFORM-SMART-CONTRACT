@@ -1,0 +1,483 @@
+{
+  "manifestVersion": "3.2",
+  "admin": {
+    "address": "0x13eeef424e08aB06CDC7a5C1464Ad2b80B78aeb8",
+    "txHash": "0x481cb76c8dbde6934fd14623ff742362546651f6fab975efb3bc7312a194778d"
+  },
+  "proxies": [
+    {
+      "address": "0xb1C2439E66aF84aB560c330D4fD74843722c6877",
+      "txHash": "0x80f74c65b62a2d814238eb9bcb9c3496994c851d7df9be3455e94566db1054f3",
+      "kind": "transparent"
+    }
+  ],
+  "impls": {
+    "b4b05aee9b926af92981ff65cb31b01667b1b0a2da27e1cd1ea32cc723d8d4d6": {
+      "address": "0x09c55106E1132BE56e6C6e0898f8245D3353EAe0",
+      "txHash": "0x02f4cc06b8b1228ea93005343c199aa51860da40ca8f3d6af10fe57c66d857fc",
+      "layout": {
+        "storage": [
+          {
+            "label": "_initialized",
+            "offset": 0,
+            "slot": "0",
+            "type": "t_uint8",
+            "contract": "Initializable",
+            "src": "@openzeppelin\\contracts-upgradeable\\proxy\\utils\\Initializable.sol:62",
+            "retypedFrom": "bool"
+          },
+          {
+            "label": "_initializing",
+            "offset": 1,
+            "slot": "0",
+            "type": "t_bool",
+            "contract": "Initializable",
+            "src": "@openzeppelin\\contracts-upgradeable\\proxy\\utils\\Initializable.sol:67"
+          },
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "1",
+            "type": "t_array(t_uint256)50_storage",
+            "contract": "ContextUpgradeable",
+            "src": "@openzeppelin\\contracts-upgradeable\\utils\\ContextUpgradeable.sol:36"
+          },
+          {
+            "label": "_owner",
+            "offset": 0,
+            "slot": "51",
+            "type": "t_address",
+            "contract": "OwnableUpgradeable",
+            "src": "@openzeppelin\\contracts-upgradeable\\access\\OwnableUpgradeable.sol:22"
+          },
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "52",
+            "type": "t_array(t_uint256)49_storage",
+            "contract": "OwnableUpgradeable",
+            "src": "@openzeppelin\\contracts-upgradeable\\access\\OwnableUpgradeable.sol:94"
+          },
+          {
+            "label": "artworks",
+            "offset": 0,
+            "slot": "101",
+            "type": "t_mapping(t_string_memory_ptr,t_struct(Artwork)642_storage)",
+            "contract": "ATO",
+            "src": "contracts\\ATO.sol:61"
+          },
+          {
+            "label": "privateartworks",
+            "offset": 0,
+            "slot": "102",
+            "type": "t_mapping(t_string_memory_ptr,t_struct(ArtworkPrivate)659_storage)",
+            "contract": "ATO",
+            "src": "contracts\\ATO.sol:62"
+          }
+        ],
+        "types": {
+          "t_address": {
+            "label": "address",
+            "numberOfBytes": "20"
+          },
+          "t_array(t_uint256)49_storage": {
+            "label": "uint256[49]",
+            "numberOfBytes": "1568"
+          },
+          "t_array(t_uint256)50_storage": {
+            "label": "uint256[50]",
+            "numberOfBytes": "1600"
+          },
+          "t_bool": {
+            "label": "bool",
+            "numberOfBytes": "1"
+          },
+          "t_mapping(t_string_memory_ptr,t_struct(Artwork)642_storage)": {
+            "label": "mapping(string => struct ATO.Artwork)",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_string_memory_ptr,t_struct(ArtworkPrivate)659_storage)": {
+            "label": "mapping(string => struct ATO.ArtworkPrivate)",
+            "numberOfBytes": "32"
+          },
+          "t_string_memory_ptr": {
+            "label": "string",
+            "numberOfBytes": "32"
+          },
+          "t_string_storage": {
+            "label": "string",
+            "numberOfBytes": "32"
+          },
+          "t_struct(Artwork)642_storage": {
+            "label": "struct ATO.Artwork",
+            "members": [
+              {
+                "label": "artist",
+                "type": "t_string_storage",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "birth",
+                "type": "t_string_storage",
+                "offset": 0,
+                "slot": "1"
+              },
+              {
+                "label": "title",
+                "type": "t_string_storage",
+                "offset": 0,
+                "slot": "2"
+              },
+              {
+                "label": "dimensionInInch",
+                "type": "t_struct(_Dimension)579_storage",
+                "offset": 0,
+                "slot": "3"
+              },
+              {
+                "label": "dimensionIncm",
+                "type": "t_struct(_Dimension)579_storage",
+                "offset": 0,
+                "slot": "6"
+              },
+              {
+                "label": "description",
+                "type": "t_string_storage",
+                "offset": 0,
+                "slot": "9"
+              },
+              {
+                "label": "mediums",
+                "type": "t_struct(_Medium)603_storage",
+                "offset": 0,
+                "slot": "10"
+              },
+              {
+                "label": "properties",
+                "type": "t_struct(_Properties)614_storage",
+                "offset": 0,
+                "slot": "18"
+              },
+              {
+                "label": "images",
+                "type": "t_struct(_Images)586_storage",
+                "offset": 0,
+                "slot": "23"
+              },
+              {
+                "label": "ownerid",
+                "type": "t_string_storage",
+                "offset": 0,
+                "slot": "26"
+              },
+              {
+                "label": "artistid",
+                "type": "t_string_storage",
+                "offset": 0,
+                "slot": "27"
+              }
+            ],
+            "numberOfBytes": "896"
+          },
+          "t_struct(ArtworkPrivate)659_storage": {
+            "label": "struct ATO.ArtworkPrivate",
+            "members": [
+              {
+                "label": "sign_location",
+                "type": "t_string_storage",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "sign_image",
+                "type": "t_string_storage",
+                "offset": 0,
+                "slot": "1"
+              },
+              {
+                "label": "hasfinger",
+                "type": "t_bool",
+                "offset": 0,
+                "slot": "2"
+              },
+              {
+                "label": "fp_location",
+                "type": "t_string_storage",
+                "offset": 0,
+                "slot": "3"
+              },
+              {
+                "label": "fp_image",
+                "type": "t_string_storage",
+                "offset": 0,
+                "slot": "4"
+              },
+              {
+                "label": "finger_miss",
+                "type": "t_string_storage",
+                "offset": 0,
+                "slot": "5"
+              },
+              {
+                "label": "owners",
+                "type": "t_string_storage",
+                "offset": 0,
+                "slot": "6"
+              },
+              {
+                "label": "company",
+                "type": "t_string_storage",
+                "offset": 0,
+                "slot": "7"
+              }
+            ],
+            "numberOfBytes": "256"
+          },
+          "t_struct(_Dimension)579_storage": {
+            "label": "struct ATO._Dimension",
+            "members": [
+              {
+                "label": "width",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "height",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "1"
+              },
+              {
+                "label": "length",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "2"
+              }
+            ],
+            "numberOfBytes": "96"
+          },
+          "t_struct(_Images)586_storage": {
+            "label": "struct ATO._Images",
+            "members": [
+              {
+                "label": "side",
+                "type": "t_string_storage",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "front",
+                "type": "t_string_storage",
+                "offset": 0,
+                "slot": "1"
+              },
+              {
+                "label": "back",
+                "type": "t_string_storage",
+                "offset": 0,
+                "slot": "2"
+              }
+            ],
+            "numberOfBytes": "96"
+          },
+          "t_struct(_Medium)603_storage": {
+            "label": "struct ATO._Medium",
+            "members": [
+              {
+                "label": "medium",
+                "type": "t_string_storage",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "paint",
+                "type": "t_string_storage",
+                "offset": 0,
+                "slot": "1"
+              },
+              {
+                "label": "stone",
+                "type": "t_string_storage",
+                "offset": 0,
+                "slot": "2"
+              },
+              {
+                "label": "metals",
+                "type": "t_string_storage",
+                "offset": 0,
+                "slot": "3"
+              },
+              {
+                "label": "compounds",
+                "type": "t_string_storage",
+                "offset": 0,
+                "slot": "4"
+              },
+              {
+                "label": "organics",
+                "type": "t_string_storage",
+                "offset": 0,
+                "slot": "5"
+              },
+              {
+                "label": "mixed",
+                "type": "t_string_storage",
+                "offset": 0,
+                "slot": "6"
+              },
+              {
+                "label": "finish",
+                "type": "t_string_storage",
+                "offset": 0,
+                "slot": "7"
+              }
+            ],
+            "numberOfBytes": "256"
+          },
+          "t_struct(_Properties)614_storage": {
+            "label": "struct ATO._Properties",
+            "members": [
+              {
+                "label": "created",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "ownercount",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "1"
+              },
+              {
+                "label": "size",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "2"
+              },
+              {
+                "label": "price",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "3"
+              },
+              {
+                "label": "pricolor",
+                "type": "t_string_storage",
+                "offset": 0,
+                "slot": "4"
+              }
+            ],
+            "numberOfBytes": "160"
+          },
+          "t_uint256": {
+            "label": "uint256",
+            "numberOfBytes": "32"
+          },
+          "t_uint8": {
+            "label": "uint8",
+            "numberOfBytes": "1"
+          },
+          "t_struct$__Dimension)579_storage": {
+            "label": "struct ATO._Dimension",
+            "members": [
+              {
+                "label": "width",
+                "type": "t_uint256"
+              },
+              {
+                "label": "height",
+                "type": "t_uint256"
+              },
+              {
+                "label": "length",
+                "type": "t_uint256"
+              }
+            ]
+          },
+          "t_struct$__Medium)603_storage": {
+            "label": "struct ATO._Medium",
+            "members": [
+              {
+                "label": "medium",
+                "type": "t_string_storage"
+              },
+              {
+                "label": "paint",
+                "type": "t_string_storage"
+              },
+              {
+                "label": "stone",
+                "type": "t_string_storage"
+              },
+              {
+                "label": "metals",
+                "type": "t_string_storage"
+              },
+              {
+                "label": "compounds",
+                "type": "t_string_storage"
+              },
+              {
+                "label": "organics",
+                "type": "t_string_storage"
+              },
+              {
+                "label": "mixed",
+                "type": "t_string_storage"
+              },
+              {
+                "label": "finish",
+                "type": "t_string_storage"
+              }
+            ]
+          },
+          "t_struct$__Properties)614_storage": {
+            "label": "struct ATO._Properties",
+            "members": [
+              {
+                "label": "created",
+                "type": "t_uint256"
+              },
+              {
+                "label": "ownercount",
+                "type": "t_uint256"
+              },
+              {
+                "label": "size",
+                "type": "t_uint256"
+              },
+              {
+                "label": "price",
+                "type": "t_uint256"
+              },
+              {
+                "label": "pricolor",
+                "type": "t_string_storage"
+              }
+            ]
+          },
+          "t_struct$__Images)586_storage": {
+            "label": "struct ATO._Images",
+            "members": [
+              {
+                "label": "side",
+                "type": "t_string_storage"
+              },
+              {
+                "label": "front",
+                "type": "t_string_storage"
+              },
+              {
+                "label": "back",
+                "type": "t_string_storage"
+              }
+            ]
+          }
+        }
+      }
+    }
+  }
+}
